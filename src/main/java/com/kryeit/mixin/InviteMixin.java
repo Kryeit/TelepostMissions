@@ -17,13 +17,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Optional;
 
-@Mixin(Invite.class)
+@Mixin(value = Invite.class, remap = false)
 public class InviteMixin {
 
-    @Inject(method = "execute(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)I", at = @At("HEAD"))
+    @Inject(method = "execute", at = @At("HEAD"))
     private static void onExecute(CommandContext<ServerCommandSource> context, String name, CallbackInfoReturnable<Integer> cir) {
-        ServerCommandSource source = context.getSource();
-        ServerPlayerEntity player = source.getPlayer();
+        ServerPlayerEntity player = context.getSource().getPlayer();
         ServerPlayerEntity invited = MinecraftServerSupplier.getServer().getPlayerManager().getPlayer(name);
 
         if (player == null || invited == null) return;
