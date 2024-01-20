@@ -1,0 +1,29 @@
+{
+  "invite": {
+    "reward": {
+      "amount": "2-23",
+      "item": "diamond"
+    },
+    "missions": {
+      "missions:invites": "4-6"
+    },
+    "titles": [
+      "TTT",
+      "Hide your valuables",
+      "The beggining of a new friendship"
+    ]
+  },
+  "invited": {
+    "reward": {
+      "amount": "2-23",
+      "item": "diamond"
+    },
+    "missions": {
+      "missions:invites": "4-6"
+    },
+    "titles": [
+      "Let them trust you",
+      "There cannot be that many posts"
+    ]
+  }
+}
