@@ -31,11 +31,9 @@ public class InviteMission implements MissionType {
         return MissionDifficulty.EASY;
     }
 
-
-    // This Text is not shown on UI's
     @Override
     public Text description() {
-        return Text.literal("Invite a player to your home post");
+        return Text.literal("Invite %s players to your home post");
     }
 
     @Override

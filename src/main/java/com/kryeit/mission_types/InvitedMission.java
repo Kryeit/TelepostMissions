@@ -30,11 +30,9 @@ public class InvitedMission implements MissionType {
         return MissionDifficulty.NORMAL;
     }
 
-
-    // This Text is not shown on UI's
     @Override
     public Text description() {
-        return Text.literal("Get invited to another player's home post");
+        return Text.literal("Get invited by %s players to your homepost");
     }
 
     @Override
