@@ -32,7 +32,7 @@ public class InvitedMission implements MissionType {
 
     @Override
     public Text description() {
-        return Text.literal("Get invited by %s players to your homepost");
+        return Text.literal("Get invited by %s players to their homepost");
     }
 
     @Override
