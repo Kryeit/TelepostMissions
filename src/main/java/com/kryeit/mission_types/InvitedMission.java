@@ -1,7 +1,6 @@
 package com.kryeit.mission_types;
 
-import com.kryeit.Main;
-import com.kryeit.TelepostMissions;
+import com.kryeit.Missions;
 import com.kryeit.missions.MissionDifficulty;
 import com.kryeit.missions.MissionManager;
 import com.kryeit.missions.MissionType;
@@ -14,7 +13,7 @@ import net.minecraft.util.Identifier;
 import java.util.UUID;
 
 public class InvitedMission implements MissionType {
-    private static final Identifier IDENTIFIER = new Identifier(Main.MOD_ID, "invites");
+    private static final Identifier IDENTIFIER = Missions.asResource("invites");
 
     public static void handleInvite(UUID player) {
         MissionManager.incrementMission(player, InvitedMission.class, IDENTIFIER, 1);

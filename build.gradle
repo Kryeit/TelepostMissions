@@ -44,7 +44,9 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	include(modImplementation "curse.maven:missions-911382:5034440")
+	// Create: Missions 0.2.12
+	modImplementation "curse.maven:missions-911382:5105859"
+
 	include(modImplementation "curse.maven:telepost-920570:5044074")
 }
 

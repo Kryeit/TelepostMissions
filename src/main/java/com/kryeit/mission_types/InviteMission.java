@@ -1,11 +1,9 @@
 package com.kryeit.mission_types;
 
-import com.kryeit.Main;
-import com.kryeit.TelepostMissions;
+import com.kryeit.Missions;
 import com.kryeit.missions.MissionDifficulty;
 import com.kryeit.missions.MissionManager;
 import com.kryeit.missions.MissionType;
-import com.kryeit.missions.mission_types.create.train.TrainDriverMissionType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -15,7 +13,7 @@ import net.minecraft.util.Identifier;
 import java.util.UUID;
 
 public class InviteMission implements MissionType {
-    private static final Identifier IDENTIFIER = new Identifier(Main.MOD_ID, "invites");
+    private static final Identifier IDENTIFIER = Missions.asResource("invites");
 
     public static void handleInvite(UUID player) {
         MissionManager.incrementMission(player, InviteMission.class, IDENTIFIER, 1);
