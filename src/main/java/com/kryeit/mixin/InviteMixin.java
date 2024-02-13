@@ -45,7 +45,7 @@ public class InviteMixin {
 
         alreadyInviting.add(player.getUuid());
         TelepostMissions.invited.put(invited.getUuid(), alreadyInviting);
-        
+
         InviteMission.handleInvite(player.getUuid());
         InvitedMission.handleInvite(invited.getUuid());
     }
